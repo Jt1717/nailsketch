@@ -1,0 +1,19 @@
+const mongoose = require('mongoose');
+
+const designSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  price: {
+    type: Number,
+    default: 0
+  },
+  // ... other design properties (style, color, occasion)
+});
+
+module.exports = mongoose.model('Design', designSchema);
